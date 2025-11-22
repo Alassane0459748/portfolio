@@ -298,6 +298,43 @@
     font-weight: 500;
 }
 
+/* Pour tablettes */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* Pour téléphones */
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-card h4 {
+        font-size: 1.4rem;
+    }
+
+    .project-card p {
+        font-size: 11px;
+    }
+
+    .project-techs span {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .btn-details {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+
+    .project-card .project-img {
+        height: 150px;
+    }
+}
 </style>
 
 </head>

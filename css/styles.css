@@ -3950,15 +3950,15 @@ h1, h2, h3, h4 {
 }
 
 /* ===================================================================
- * # ABOUT
+ * # ABOUT - Version Responsive Complète
  * ------------------------------------------------------------------- */
-.s-about {
+ .s-about {
     padding-top: var(--vspace-7);
     color: var(--color-3);
 }
 #about p {
-    font-size: 15px;   /* réduit légèrement */
-    line-height: 1.6;     /* garde une bonne lisibilité */
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .about-wrapper-card {
@@ -3997,7 +3997,7 @@ h1, h2, h3, h4 {
     border-radius: 15px;
     object-fit: cover;
 }
-.about-photo-card h3 {
+.about-photo-card h2 {
     margin-top: 15px;
     font-size: 1.4rem;
 }
@@ -4026,9 +4026,6 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
-#about.s-about {
-    padding-top: 40px !important;  /* au lieu de 100px ou plus */
-}
 
 /* Petites cards */
 .small-card {
@@ -4054,31 +4051,147 @@ h1, h2, h3, h4 {
     color: var(--color-text-light);
 }
 
-/* Responsive mobile */
-@media (max-width: 900px) {
-    .s-about__grid {
-        grid-template-columns: 1fr;
-    }
-    .about-two-cards {
-        grid-template-columns: 1fr;
-    }
-}
+/* Title centré */
 #about .text-display-title {
     text-align: center;
     width: 100%;
     display: block;
 }
 
-
 /* ------------------------------------------------------------------- 
- * responsive:
- * about
+ * Responsive Tablette et Mobile
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 800px) {
-    .s-about {
-        padding-top: var(--vspace-5);
+/* ===================================================================
+ * # ABOUT - Compact & Responsive Mobile/Tablette
+ * ------------------------------------------------------------------- */
+
+/* Tablette large (1024px et moins) */
+@media (max-width: 1024px) {
+    .about-wrapper-card {
+        padding: 30px;
+        margin: 20px auto;
+    }
+    .s-about__grid {
+        grid-template-columns: 1fr; /* empile photo et contenu */
+        gap: 2rem;
+    }
+    .about-photo-card {
+        padding: 20px;
+    }
+    .about-photo-card h2 {
+        font-size: 1.3rem;
+    }
+    .about-photo-card .photo-subtitle {
+        font-size: 0.9rem;
+    }
+    .about-card-main {
+        padding: 20px;
+    }
+    .about-two-cards {
+        grid-template-columns: 1fr 1fr; /* deux petites cartes côte à côte si possible */
+        gap: 15px;
     }
 }
+@media screen and (max-width: 768px) {
+    .s-intro__content-text {
+        grid-column: 1/-1;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .intro-photo {
+        width: 15rem;
+        height: 15rem;
+        margin: 0 auto 1.5rem;
+    }
+    .s-intro__content-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+    }
+}
+/* Cacher le bouton CV sur tablette et mobile */
+@media screen and (max-width: 1024px) {
+    .s-intro__btn-download {
+        display: none !important;
+    }
+}
+
+/* Tablette portrait / mobile moyen (768px et moins) */
+@media (max-width: 768px) {
+    .about-wrapper-card {
+        padding: 20px;
+    }
+    .about-photo-card {
+        padding: 15px;
+    }
+    .about-photo-card h2 {
+        font-size: 1.2rem;
+    }
+    .about-photo-card .photo-subtitle {
+        font-size: 0.85rem;
+    }
+    .about-card-main {
+        padding: 15px;
+    }
+    .about-two-cards {
+        grid-template-columns: 1fr; /* empile petites cartes */
+        gap: 10px;
+    }
+    .about-card {
+        padding: 15px;
+    }
+    .s-about__list li {
+        font-size: 13px;
+    }
+}
+
+/* Mobile petit (480px et moins) */
+@media (max-width: 480px) {
+    .s-about {
+        padding-top: var(--vspace-3);
+    }
+    .about-wrapper-card {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    .about-photo-card {
+        padding: 10px;
+    }
+    .about-photo-card h2 {
+        font-size: 1.1rem;
+    }
+    .about-photo-card .photo-subtitle {
+        font-size: 0.8rem;
+    }
+    .about-card-main {
+        padding: 10px;
+    }
+    .about-two-cards {
+        gap: 8px;
+    }
+    .about-card {
+        padding: 10px;
+    }
+    .s-about__list li {
+        font-size: 12px;
+    }
+    
+    /* Boutons et icônes réseaux sociaux */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .social-icons a {
+        font-size: 1.2rem; /* taille plus compacte */
+        padding: 5px;
+    }
+}
+
 
 
 /* ===================================================================
