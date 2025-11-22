@@ -4111,9 +4111,10 @@ h1, h2, h3, h4 {
         align-items: center;
     }
 }
-/* Cacher le bouton CV sur tablette et mobile */
+/* Cacher le bouton CV et les boutons de contact sur tablette et mobile */
 @media screen and (max-width: 1024px) {
-    .s-intro__btn-download {
+    .s-intro__btn-download,
+    .s-intro__content-btns {
         display: none !important;
     }
 }
