@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PORTFILIO || ALASSANE GUEYE</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+ /* Wrapper général pour centrer la card */
+.skills-wrapper-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/* La grosse card identique à ABOUT */
+.skills-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 70px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* Scroll et layout des technologies */
+.tech-row {
+    display: flex;
+    gap: 1rem; /* espace entre les cartes */
+    overflow-x: auto; /* permet de scroller horizontalement si dépassement */
+    padding-bottom: 0.5rem;
+}
+
+
+.tech-card {
+    min-width: 200px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid #e9e9e9;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.35s ease-in-out;
+}
+
+/* Icônes */
+.tech-card i {
+    font-size: 40px;
+    color: #2563EB;
+    margin-bottom: 10px;
+}
+
+/* Nom techno */
+.tech-card span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Progress bar */
+.progress {
+    width: 100%;
+    background: #ebebeb;
+    height: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: linear-gradient(to right, #2563EB, #00C4FF);
+    border-radius: 8px;
+}
+
+.percent {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Hover */
+.tech-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-color: #2563EB;
+}
+/* Description cachée par défaut */
+.tech-desc {
+    display: none;
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Au survol : masquer barre + pourcentage, afficher description */
+.tech-card:hover .progress,
+.tech-card:hover .percent {
+    display: none;
+}
+
+.tech-card:hover .tech-desc {
+    display: block;
+}
+
+/* ========================
+   Couleurs par techno
+======================== */
+
+/* Front-End */
+.frontend .tech-card i.html5 { color: #F16529; }
+.frontend .tech-card i.css3 { color: #264DE4; }
+.frontend .tech-card i.js { color: #F7DF1E; }
+.frontend .tech-card i.tailwind { color: #38BDF8; }
+.frontend .tech-card i.react { color: #61DAFB; }
+
+.frontend .tech-card .progress-bar.html5 { background: #F16529; }
+.frontend .tech-card .progress-bar.css3 { background: #264DE4; }
+.frontend .tech-card .progress-bar.js { background: #F7DF1E; }
+.frontend .tech-card .progress-bar.tailwind { background: #38BDF8; }
+.frontend .tech-card .progress-bar.react { background: #61DAFB; }
+
+/* Back-End */
+
+.backend .tech-card i.laravel { color: #FF2D20; }
+.backend .tech-card i.mysql { color: #4479A1; }
+.backend .tech-card i.apirest { color: #10B981; }
+.backend .tech-card i.nodejs { color: #68A063; }
+
+.backend .tech-card .progress-bar.laravel { background: #FF2D20; }
+.backend .tech-card .progress-bar.mysql { background: #4479A1; }
+.backend .tech-card .progress-bar.apirest { background: #10B981; }
+.backend .tech-card .progress-bar.nodejs { background: #68A063; }
+
+/* DevOps & Outils */
+.devops .tech-card i.git { color: #F05032; }
+.devops .tech-card i.github { color: #181717; }
+.devops .tech-card i.vscode { color: #007ACC; }
+.devops .tech-card i.npm { color: #CB3837; }
+
+.devops .tech-card .progress-bar.git { background: #F05032; }
+.devops .tech-card .progress-bar.github { background: #181717; }
+.devops .tech-card .progress-bar.vscode { background: #007ACC; }
+.devops .tech-card .progress-bar.npm { background: #CB3837; }
+
+/* Design & Infographie */
+.design .tech-card i.photoshop { color: #31A8FF; }
+.design .tech-card i.illustrator { color: #FF9A00; }
+
+
+.design .tech-card .progress-bar.photoshop { background: #31A8FF; }
+.design .tech-card .progress-bar.illustrator { background: #FF9A00; }
+
+/* Langages de programmation */
+.languages .tech-card i.java { color: #007396; }
+.languages .tech-card i.c { color: #A8B9CC; }
+.languages .tech-card i.php { color: #777BB4; }
+.languages .tech-card i.cpp { color: #00599C; }
+
+.languages .tech-card .progress-bar.java { background: #007396; }
+.languages .tech-card .progress-bar.c { background: #A8B9CC; }
+.languages .tech-card .progress-bar.php { background: #777BB4; }
+.languages .tech-card .progress-bar.cpp { background: #00599C; }
+
+/* CMS & Sites Web */
+.cms .tech-card i.wordpress { color: #21759B; }
+.cms .tech-card .progress-bar.wordpress { background: #21759B; }
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.project-card {
+    position: relative; /* nécessaire pour positionner le badge */
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* nécessaire pour positionner le bouton sur l'image */
+    overflow: hidden;   /* pour que le bouton ne dépasse pas */
+}
+/* Badge */
+.project-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+/* Différents états */
+.badge-in-progress {
+    background-color: #f59e0b; /* orange pour en cours */
+}
+
+.badge-completed {
+    background-color: #10b981; /* vert pour terminé */
+}
+
+/* Image */
+.project-card .project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+/* Texte */
+.project-card h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 12px 0 10px;
+}
+
+.project-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+
+/* Bouton centré sur l'image */
+.btn-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* invisible par défaut */
+    padding: 10px 18px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+/* Hover sur le card */
+.project-card:hover .btn-details {
+    opacity: 1;
+}
+
+/* Flou de l'image au hover */
+.project-card:hover .project-img {
+    filter: blur(3px);
+    transform: scale(1.05); /* léger zoom pour effet moderne */
+}
+.project-techs {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-techs span {
+    background-color: #e0e7ff;
+    color: #1e3a8a;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+</style>
+
+</head>
+
+
+<body id="top">
+
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" style="color:white" href="index.html">
+                            <i class="fa fa-users me-2"></i>
+                          A&G
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>GUEYE</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Accueil</a></li>
+                        <li><a class="smoothscroll" href="#about">A propos</a></li>
+                        <li><a class="smoothscroll" href="#works">Mes competences</a></li>
+                        <li><a class="smoothscroll" href="#projects">Mes projets</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                         <!-- Photo -->
+                         <div class="intro-photo rounded-full overflow-hidden flex-shrink-0" style="margin-top: -8rem;">
+    <img src="images/rane1.jpeg" alt="Alassane Gueye" class="w-full h-full object-cover">
+</div>
+
+                    
+                    <div class="s-intro__content-text">
+
+                        <div class="s-intro__content-pretitle text-pretitle">Bienvenue !!!</div>
+                        <h1 class="s-intro__content-title">
+                        Je suis Alassane Gueye, <br>
+                        développeur passionné, spécialisé dans la création de solutions modernes. <br>
+                        </h1>                            
+
+                        <div class="s-intro__content-btns" style="margin-top: 0.5rem;">
+    <a class="smoothscroll btn" href="#about">En savoir plus</a>
+    <a class="smoothscroll btn btn--stroke" href="#footer">Me Contactez</a>
+</div>
+ 
+
+                    </div> <!-- s-intro__content-text -->                     
+                    
+                </div> <!-- s-intro__content-inner -->  
+            </div> <!-- s-intro__content -->
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="https://www.facebook.com/friends/requests?profile_id=100047833644067&notif_id=1763649026702652&notif_t=friend&ref=notif">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                        <span class="u-screen-reader-text">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/Alassan95255304">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"></path></svg>
+                        <span class="u-screen-reader-text">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                        <span class="u-screen-reader-text">Instagram</span>
+                    </a>
+                </li>
+                <li>
+    <a href="https://www.linkedin.com/in/alassane-gueye-0b6515242/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764s1.75.79 1.75 1.764c0 .974-.784 1.764-1.75 1.764zm13.5 10.268h-3v-4.569c0-1.089-.02-2.492-1.518-2.492-1.518 0-1.751 1.188-1.751 2.414v4.647h-3v-9h2.881v1.233h.041c.401-.757 1.379-1.555 2.838-1.555 3.034 0 3.594 1.996 3.594 4.59v5.732z"/>
+        </svg>
+        <span class="u-screen-reader-text">LinkedIn</span>
+    </a>
+</li>
+
+                <li>
+                    <a href="#0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.99 2C6.472 2 2 6.473 2 11.99c0 4.232 2.633 7.85 6.35 9.306-.088-.79-.166-2.006.034-2.868.182-.78 1.172-4.966 1.172-4.966s-.299-.599-.299-1.484c0-1.388.805-2.425 1.808-2.425.853 0 1.264.64 1.264 1.407 0 .858-.546 2.139-.827 3.327-.235.994.499 1.805 1.479 1.805 1.775 0 3.141-1.872 3.141-4.575 0-2.392-1.719-4.064-4.173-4.064-2.843 0-4.512 2.132-4.512 4.335 0 .858.331 1.779.744 2.28a.3.3 0 0 1 .069.286c-.076.315-.245.994-.277 1.133-.044.183-.145.222-.335.134-1.247-.581-2.027-2.405-2.027-3.871 0-3.151 2.289-6.045 6.601-6.045 3.466 0 6.159 2.469 6.159 5.77 0 3.444-2.171 6.213-5.184 6.213-1.013 0-1.964-.525-2.29-1.146l-.623 2.374c-.225.868-.834 1.956-1.241 2.62a10 10 0 0 0 2.958.445c5.517 0 9.99-4.473 9.99-9.99S17.507 2 11.99 2"></path></svg>
+                        <span class="u-screen-reader-text">Pinterest</span>
+                    </a>
+                </li>
+            </ul> <!-- end s-intro__social -->
+
+            <div class="s-intro__content-media">                               
+                <img src="images/dev.jpg" srcset="images/dev.jpg 1x, images/dev.jpg 2x" alt="">
+            </div> <!-- s-intro__content-media -->                
+
+            <div class="s-intro__btn-download">
+               <a class="btn btn--stroke" 
+   href="files/CV-Alassane.pdf" 
+   download="CV-Alassane.pdf" 
+   target="_blank">
+   Télécharger mon CV
+</a>
+
+            </div> <!-- end s-intro__btn-download -->
+            
+            <div class="s-intro__scroll-down">
+                <a href="#about" class="smoothscroll">
+                    <div class="scroll-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg>
+                    </div>
+                    <span class="scroll-text u-screen-reader-text">Scroll Down</span>
+                </a>
+            </div> <!-- s-intro__scroll-down -->
+
+        </section> <!-- end s-intro -->
+        <section class="stats-cards">
+    <div class="stats-wrapper">
+
+        <div class="stat-card">
+            <h3>04+</h3>
+            <p>Années d'expérience</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>08+</h3>
+            <p>Projets réalisés</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>25+</h3>
+            <p>Technologies maîtrisées</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- # about
+================================================== -->
+<section id="about" class="s-about target-section">
+
+<div class="about-wrapper-card">
+
+    <div class="row s-about__content">
+        <div class="column xl-12">
+            <!-- Header -->
+            <div class="section-header" data-num="01" style="text-align:center; width:100%;">
+    <h2 class="text-display-title">À propos de moi.</h2>
+</div>
+
+            <div class="s-about__grid">
+
+                <!-- ====== CARD PHOTO À GAUCHE ====== -->
+                <div class="about-photo-card">
+                    <img src="images/RANE.jpeg" alt="Ma Photo" class="photo">
+                    <h2>Alassane Gueye</h2>
+                    <p class="photo-subtitle">Développeur Web & Mobile</p>
+                </div>
+
+                <!-- ====== COLONNE DE DROITE ====== -->
+                <div class="about-right">
+
+                    <!-- ====== CARD "À propos" ====== -->
+                    <div class="about-card about-card-main">
+                    <p> Le développement est pour moi bien plus qu’un métier : c’est une passion qui m’anime chaque jour. J’aime créer, imaginer et donner vie à des idées qui deviennent de vraies solutions pour les gens. Ce qui me motive, c’est cette sensation unique de transformer un simple concept en quelque chose de concret, utile et impactant. </p> <p style="margin-top:15px;"> Chaque projet est un terrain d’exploration où je peux apprendre, construire et repousser mes limites. J’aime comprendre les besoins, résoudre les problèmes et concevoir des expériences qui font une différence. Le développement m’inspire parce qu’il me permet d’apporter de la valeur, de créer du sens et de contribuer à un monde numérique meilleur. </p>
+                    </div>
+
+                    <!-- ====== CARDS FORMATION + PASSION ====== -->
+                    <div class="about-two-cards">
+
+                       <!-- CARD FORMATION -->
+<div class="about-card small-card" style="font-size:1.5rem; line-height:1.4;">
+    <h4 style="font-size:25px;">Formation</h4>
+    <ul class="s-about__list">
+    <li>
+            Auto-formation
+            <span style="display:block;  font-size:15px;">Technologies web, frameworks modernes</span>
+        </li>
+        <li>
+            Licence Developpement Application
+            <span style="display:block; font-size:15px;">Universite Alioune Diop</span>
+        </li>
+        <li>
+           Baccalaureat S2
+            <span style="display:block; font-size:15px;">Groupe Scolaire Maieutique</span>
+        </li>
+       
+    </ul>
+</div>
+
+<!-- CARD PASSION -->
+<div class="about-card small-card" style="font-size:0.9rem; line-height:1.4;">
+    <h4 style="font-size:25px;">Passion</h4>
+    <ul class="s-about__list">
+        <li style=" font-size:15px">Créer des applications qui résolvent des problèmes réels</li>
+        <li style=" font-size:15px;">Explorer les nouveautés du développement et de l’IA</li>
+        <li style=" font-size:15px;">Concevoir des solutions utiles pour les entreprises locales</li>
+    </ul>
+</div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section id="works" class="s-works target-section">
+
+    <div class="skills-wrapper-card">
+        <div class="container mx-auto px-6 py-16">
+
+            <!-- CARD PRINCIPALE CENTRÉE -->
+            <div class="skills-card">
+
+                <!-- TITRE -->
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-semibold tracking-tight text-gray-900 mb-4 font-[Poppins]">
+                        💼 Mes Compétences
+                    </h2>
+                    <p class="text-lg text-gray-600 font-[Inter] leading-relaxed max-w-2xl mx-auto">
+                     Une synergie de compétences techniques et créatives me permettant de créer des solutions complètes, innovantes et performantes.
+                    </p>
+                </div>
+
+                <!-- =============================
+                    FRONT-END
+                ============================== -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">🎨 Front-End</h3>
+                    <div class="tech-row frontend">
+
+                        <div class="tech-card">
+                            <i class="fab fa-html5 html5"></i>
+                            <span>HTML5</span>
+                            <div class="progress"><div class="progress-bar html5" style="width:90%;"></div></div>
+                            <p class="percent">90%</p>
+                            <p class="tech-desc">Je structure les pages web et crée des squelettes HTML propres et sémantiques.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-css3-alt css3"></i>
+                            <span>CSS3</span>
+                            <div class="progress"><div class="progress-bar css3" style="width:85%;"></div></div>
+                            <p class="percent">85%</p>
+                            <p class="tech-desc">Stylisation de sites responsives avec animations et transitions modernes.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-js js"></i>
+                            <span>JavaScript</span>
+                            <div class="progress"><div class="progress-bar js" style="width:75%;"></div></div>
+                            <p class="percent">75%</p>
+                            <p class="tech-desc">Manipulation du DOM, création d’interactions et de fonctionnalités dynamiques.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-wind tailwind"></i>
+                            <span>TailwindCSS</span>
+                            <div class="progress"><div class="progress-bar tailwind" style="width:80%;"></div></div>
+                            <p class="percent">80%</p>
+                            <p class="tech-desc">Création de layouts flexibles et modernes avec Tailwind CSS.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-react react"></i>
+                            <span>React</span>
+                            <div class="progress"><div class="progress-bar react" style="width:70%;"></div></div>
+                            <p class="percent">70%</p>
+                            <p class="tech-desc">Développement d’applications SPA et composants réutilisables.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- =============================
+                    BACK-END
+                ============================== -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">⚙️ Back-End</h3>
+                    <div class="tech-row backend">
+
+                        <div class="tech-card">
+                            <i class="fab fa-laravel laravel"></i>
+                            <span>Laravel</span>
+                            <div class="progress"><div class="progress-bar laravel" style="width:90%;"></div></div>
+                            <p class="percent">90%</p>
+                            <p class="tech-desc">Développement d’API REST et applications sécurisées avec Laravel.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-database mysql"></i>
+                            <span>MySQL</span>
+                            <div class="progress"><div class="progress-bar mysql" style="width:80%;"></div></div>
+                            <p class="percent">80%</p>
+                            <p class="tech-desc">Gestion et optimisation de bases de données relationnelles.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-plug apirest"></i>
+                            <span>API REST</span>
+                            <div class="progress"><div class="progress-bar apirest" style="width:70%;"></div></div>
+                            <p class="percent">70%</p>
+                            <p class="tech-desc">Création et intégration d’API REST pour interconnexion d’applications.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-node-js nodejs"></i>
+                            <span>Node.js</span>
+                            <div class="progress"><div class="progress-bar nodejs" style="width:65%;"></div></div>
+                            <p class="percent">65%</p>
+                            <p class="tech-desc">Développement de serveur backend léger et performant avec Node.js.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- =============================
+                    DEVOPS & OUTILS
+                ============================== -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">🛠️ DevOps & Outils</h3>
+                    <div class="tech-row devops">
+
+                        <div class="tech-card">
+                            <i class="fab fa-git-alt git"></i>
+                            <span>Git</span>
+                            <div class="progress"><div class="progress-bar git" style="width:90%;"></div></div>
+                            <p class="percent">90%</p>
+                            <p class="tech-desc">Gestion de version et suivi des projets avec Git.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-github github"></i>
+                            <span>GitHub</span>
+                            <div class="progress"><div class="progress-bar github" style="width:85%;"></div></div>
+                            <p class="percent">85%</p>
+                            <p class="tech-desc">Collaboration et partage de projets sur GitHub.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-code vscode"></i>
+                            <span>VS Code</span>
+                            <div class="progress"><div class="progress-bar vscode" style="width:95%;"></div></div>
+                            <p class="percent">95%</p>
+                            <p class="tech-desc">Édition et debugging efficaces avec Visual Studio Code.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-npm npm"></i>
+                            <span>NPM</span>
+                            <div class="progress"><div class="progress-bar npm" style="width:80%;"></div></div>
+                            <p class="percent">80%</p>
+                            <p class="tech-desc">Gestion de packages et dépendances pour projets JavaScript.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- =============================
+                    DESIGN & INFOGRAPHIE
+                ============================== -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">🎨 Design & Infographie</h3>
+                    <div class="tech-row design">
+
+                        <div class="tech-card">
+                            <i class="fas fa-image photoshop"></i>
+                            <span>Photoshop</span>
+                            <div class="progress"><div class="progress-bar photoshop" style="width:90%;"></div></div>
+                            <p class="percent">90%</p>
+                            <p class="tech-desc">Création et retouche d’images professionnelles.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-pen-nib illustrator"></i>
+                            <span>Illustrator</span>
+                            <div class="progress"><div class="progress-bar illustrator" style="width:88%;"></div></div>
+                            <p class="percent">88%</p>
+                            <p class="tech-desc">Création de logos, icônes et illustrations vectorielles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =============================
+                    LANGAGES DE PROGRAMMATION
+                ============================== -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">💻 Langages de Programmation</h3>
+                    <div class="tech-row languages">
+
+                        <div class="tech-card">
+                            <i class="fab fa-java java"></i>
+                            <span>Java</span>
+                            <div class="progress"><div class="progress-bar java" style="width:70%;"></div></div>
+                            <p class="percent">70%</p>
+                            <p class="tech-desc">Développement d’applications orientées objet et desktop.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-code c"></i>
+                            <span>C</span>
+                            <div class="progress"><div class="progress-bar c" style="width:60%;"></div></div>
+                            <p class="percent">60%</p>
+                            <p class="tech-desc">Programmation système et compréhension des algorithmes basiques.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fab fa-php php"></i>
+                            <span>PHP</span>
+                            <div class="progress"><div class="progress-bar php" style="width:85%;"></div></div>
+                            <p class="percent">85%</p>
+                            <p class="tech-desc">Création de logiques serveur et gestion de bases de données.</p>
+                        </div>
+
+                        <div class="tech-card">
+                            <i class="fas fa-terminal cpp"></i>
+                            <span>C++</span>
+                            <div class="progress"><div class="progress-bar cpp" style="width:55%;"></div></div>
+                            <p class="percent">55%</p>
+                            <p class="tech-desc">Développement orienté objet et projets logiciels complexes.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- =============================
+    CMS & Sites Web
+============================== -->
+<div class="mb-12">
+    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">🌐 CMS & Sites Web</h3>
+    <div class="tech-row cms">
+
+        <div class="tech-card">
+            <i class="fab fa-wordpress wordpress"></i>
+            <span>WordPress</span>
+            <div class="progress"><div class="progress-bar wordpress" style="width:85%;"></div></div>
+            <p class="percent">85%</p>
+            <p class="tech-desc">Création de sites web, personnalisation de thèmes et plugins, optimisation SEO.</p>
+        </div>
+    </div>
+</div>
+
+            </div><!-- END CARD -->
+
+        </div>
+    </div>
+
+</section>
+<section id="projects" class="s-projects target-section">      
+    <div class="skills-wrapper-card">
+        <div class="container mx-auto px-6 py-16">
+
+            <!-- CARD CENTRALE -->
+            <div class="skills-card">
+
+                <!-- TITRE -->
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-semibold tracking-tight text-gray-900 mb-4 font-[Poppins]">
+                        🚀 Mes Projets
+                    </h2>
+                    <p class="text-lg text-gray-600 font-[Inter] leading-relaxed max-w-2xl mx-auto">
+                        Découvrez une sélection de projets que j’ai réalisés avec passion.
+                    </p>
+                </div>
+
+                <!-- GRID DES PROJETS -->
+                <div class="projects-grid">
+
+                    <!-- PROJET 1 -->
+                    <div class="project-card">
+                        <div class="project-badge badge-in-progress">En cours</div>
+                        <img src="images/s1.png" alt="SunuSuuf App" class="project-img">
+                        <h4>SunuSuuf</h4>
+                        <p>
+                            Plateforme de gestion foncière complète avec dashboard, parcelles,
+                            paiements, contrats et API sécurisée.
+                        </p>
+                        <div class="project-techs">
+                            <span>Node Js</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Laravel</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+
+                    <!-- PROJET 2 -->
+                    <div class="project-card">
+                        <div class="project-badge badge-completed">Terminé</div>
+                        <img src="images/gaov1.png" alt="GAOV" class="project-img">
+                        <h4>GAOV</h4>
+                        <p>
+                            Application web de gestion optimisée des opérations GAOV, incluant tableaux de bord,
+                            suivi des données et rapports automatisés.
+                        </p>
+                        <div class="project-techs">
+                            <span>Laravel</span>
+                            <span>TailwindCSS</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+
+                      <!-- PROJET 4 : GESTION ECOLE -->
+                      <div class="project-card">
+                        <div class="project-badge badge-completed">Terminé</div>
+                        <img src="images/ges.png" alt="Gestion École" class="project-img">
+                        <h4>Gestion École</h4>
+                        <p>
+                            Système complet de gestion scolaire : élèves, classes, paiements, bulletins et notifications.
+                        </p>
+                        <div class="project-techs">
+                            <span>PHP</span>
+                            <span>Vue.js</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+                    <!-- PROJET 3 -->
+                    <div class="project-card">
+                        <div class="project-badge badge-completed">Terminé</div>
+                        <img src="images/aaas1.png" alt="L'AAAS" class="project-img">
+                        <h4>L'AAAS</h4>
+                        <p>
+                            Plateforme web moderne pour la gestion des activités et des services de l'AAAS.
+                        </p>
+                        <div class="project-techs">
+                            <span>Laravel</span>
+                            <span>TailwindCSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+
+                    <!-- PROJET 5 : VIDANGE -->
+                    <div class="project-card">
+                        <div class="project-badge badge-in-progress">En cours</div>
+                        <img src="images/vid.png" alt="Vidange Service" class="project-img">
+                        <h4>Vidange Service</h4>
+                        <p>
+                            Application de gestion des demandes de vidange, planification des interventions et facturation automatique.
+                        </p>
+                        <div class="project-techs">
+                            <span>Laravel</span>
+                            <span>React</span>
+                            <span>API REST</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+
+                    <!-- PROJET 6 : STEM -->
+                    <div class="project-card">
+                        <div class="project-badge badge-completed">Terminé</div>
+                        <img src="images/stem.png" alt="STEM Learning App" class="project-img">
+                        <h4>STEM Learning</h4>
+                        <p>
+                            Plateforme éducative interactive pour enfants, dédiée aux sciences et technologies (STEM).
+                        </p>
+                        <div class="project-techs">
+                            <span>JavaFx</span>
+                            <span>Java</span>
+                            <span>JEE</span>
+                            <span>TailwindCSS</span>
+                        </div>
+                        <a href="#" class="btn-details">Voir détails</a>
+                    </div>
+
+                </div>
+            </div><!-- END CARD -->
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- # footer 
+================================================== -->
+<footer id="footer" class="s-footer target-section">
+
+<div class="row s-footer__content">
+
+  <!-- PRÉSENTATION -->
+<div class="column xl-6 md-12 s-footer__block s-footer__about">
+    <p class="attention-getter">
+        Je suis Alassane Gueye, développeur full-stack passionné par la création 
+        d’applications web modernes, performantes et sécurisées. 
+        J'accompagne entreprises et particuliers dans leurs projets numériques : 
+        développement, design, optimisation et intégration de solutions sur mesure.
+    </p>
+
+  <!-- BOUTON POUR TÉLÉCHARGER LE CV -->
+<a class="btn btn--stroke" 
+   href="files/CV-Alassane.pdf" 
+   download="CV-Alassane.pdf" 
+   target="_blank"
+   style="border-color: red; color: red;">
+   Télécharger mon CV
+</a>
+
+</div>
+
+
+    <!-- SERVICES - RÉSEAUX - CONTACT -->
+    <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+        <div class="row">
+
+            <!-- SERVICES -->
+            <div class="column xl-4 lg-4 md-6 tab-12">
+                <h5>Services</h5>
+                <ul class="link-list">
+                    <li>Développement Web</li>
+                    <li>Développement Mobile</li>
+                    <li>Consulting Tech</li>
+                    <li>Formation & Coaching</li>
+                </ul>
+            </div>
+
+            <!-- RÉSEAUX SOCIAUX -->
+            <div class="column xl-4 lg-4 md-6 tab-12">
+                <h5>Réseaux sociaux</h5>
+                <ul class="link-list">
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="column xl-4 lg-4 md-6 tab-12">
+                <h5>Contact</h5>
+                <ul class="link-list">
+                    <li><a href="mailto:waderane3@gmail.com">waderane3@gmail.com</a></li>
+                    <li><a href="tel:+221773448745">+221 77 344 87 45</a></li>
+                    <li>Camberene 1, Dakar</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</div> <!-- end s-footer__content -->
+
+<!-- COPYRIGHT -->
+<div class="row s-footer__bottom">
+    <div class="column ss-copyright">
+        <span>© 2025 Alassane Gueye — Tous droits réservés.</span>
+    </div>
+</div>
+
+</footer>
+<!-- end s-footer -->
+
+
+
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
