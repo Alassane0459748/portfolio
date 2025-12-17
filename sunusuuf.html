@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SunuSuuf – Plateforme de gestion foncière</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+    font-family:'Poppins', sans-serif;
+    background: url('images/bac1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color:#333;
+    line-height:1.6;
+}
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+        h1,h2,h3{
+            color:#1f2937;
+        }
+        section{
+            padding:60px 0;
+        }
+
+        /* HERO */
+        .hero{
+            background:#e5e7eb;
+        }
+        .hero-content{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+            align-items:center;
+        }
+        .hero h1{
+            font-size:2.5rem;
+            margin-bottom:15px;
+        }
+        .hero p{
+            font-size:1rem;
+            color:#555;
+        }
+        .hero img{
+            width:100%;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* CONTEXTE */
+        .context p{
+            max-width:800px;
+            margin-bottom:30px;
+            color:#ffffff;
+        }
+        .context-cards{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:30px;
+        }
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:14px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        }
+        .card h3{
+            margin-bottom:10px;
+            font-size:1.2rem;
+        }
+        .card p{
+            font-size:0.95rem;
+            color:#000000;
+        }
+
+        /* FONCTIONNALITES */
+        .features-grid{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:25px;
+        }
+        .feature-card{
+            background:#fff;
+            padding:25px;
+            border-radius:14px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+            transition:transform .3s ease;
+        }
+        .feature-card:hover{
+            transform:translateY(-6px);
+        }
+        .feature-card h4{
+            margin-bottom:8px;
+            font-size:1.05rem;
+        }
+        .feature-card p{
+            font-size:0.9rem;
+            color:#000000;
+        }
+
+        /* LISTES SIMPLES */
+        .list{
+            max-width:900px;
+        }
+        .list li{
+            margin-bottom:10px;
+            color:#000000;
+        }
+        .video-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.video-card{
+    max-width:900px;
+    width:100%;
+    text-align:center;
+}
+
+.video-card video{
+    width:100%;
+    margin-top:15px;
+    border-radius:12px;
+}
+i{
+    margin-right:8px;
+    color:#2563eb; /* bleu moderne */
+}
+.feature-card i{
+    color:#16a34a; /* vert validation */
+}
+
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .hero-content{
+                grid-template-columns:1fr;
+            }
+            .context-cards{
+                grid-template-columns:1fr;
+            }
+            .features-grid{
+                grid-template-columns:1fr 1fr;
+            }
+        }
+        @media(max-width:600px){
+            .features-grid{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1 : HERO -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div>
+                <h1><i class="fa-solid fa-earth-africa"></i> Plateforme de gestion foncière</h1>
+                <p>
+                    SunuSuuf est une solution numérique complète dédiée à la gestion foncière,
+                    permettant de centraliser les parcelles, les propriétaires, les paiements
+                    et les documents contractuels au sein d’un système sécurisé et moderne.
+                </p>
+            </div>
+            <div>
+                <img src="images/s1.png" alt="Aperçu SunuSuuf">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 : CONTEXTE -->
+    <section class="context">
+        <div class="container">
+            <h2><i class="fa-solid fa-circle-info"></i> Contexte du projet</h2>
+            <p>
+                Le projet SunuSuuf est né du besoin de digitaliser et d’optimiser la gestion
+                foncière, souvent confrontée à des problèmes de traçabilité, de lenteur
+                administrative et de manque de transparence dans le suivi des parcelles
+                et des transactions.
+            </p>
+
+            <div class="context-cards">
+                <div class="card">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Problématique résolue</h3>
+                    <p>
+                        Absence de centralisation des données foncières, difficulté de suivi
+                        des paiements et risques de conflits liés à la gestion manuelle
+                        des informations.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-bullseye"></i> Objectifs atteints</h3>
+                    <p>
+                        Mise en place d’un système fiable, sécurisé et accessible permettant
+                        une gestion efficace des parcelles, des clients et des opérations
+                        financières.
+                    </p>
+                </div>
+            </div>
+
+                    <!-- CARD VIDEO LOCALE -->
+            <div class="video-wrapper">
+                <div class="card video-card">
+                    <h3><i class="fa-solid fa-play"></i> Démonstration vidéo de la plateforme</h3>
+                    <p>Aperçu réel de l'enjeux du domaine foncier au Senegal.</p>
+                    <video controls>
+                        <source src="images/SunuSuuf.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3 : FONCTIONNALITES -->
+    <section>
+        <div class="container">
+            <h2><i class="fa-solid fa-layer-group"></i> Fonctionnalités principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4><i class="fa-solid fa-map-location-dot"></i> Gestion des parcelles</h4>
+                    <p>Création, suivi et mise à jour des informations foncières.</p>
+                </div>
+                <div class="feature-card">
+                   <h4><i class="fa-solid fa-users"></i> Gestion des clients</h4>
+                    <p>Base de données centralisée des propriétaires et bénéficiaires.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fa-solid fa-money-check-dollar"></i> Suivi des paiements</h4>
+                    <p>Historique, échéances et génération de reçus automatisés.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fa-solid fa-file-contract"></i> Génération de contrats</h4>
+                    <p>Contrats dynamiques selon le type d’accompagnement.</p>
+                </div>
+                <div class="feature-card">
+                   <h4><i class="fa-solid fa-chart-pie"></i> Dashboard analytique</h4>
+                    <p>Statistiques et indicateurs clés en temps réel.</p>
+                </div>
+                <div class="feature-card">
+                   <h4><i class="fa-solid fa-shield-halved"></i> API sécurisée</h4>
+                    <p>Interopérabilité avec d’autres systèmes et services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- SECTION 4 : ARCHITECTURE -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-diagram-project"></i> Architecture technique</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4><i class="fa-solid fa-desktop"></i> Architecture client-serveur</h4>
+                <p>Séparation claire entre le front-end et le back-end.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-solid fa-network-wired"></i> API REST sécurisée</h4>
+                <p>Communication fiable et sécurisée entre les services.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-solid fa-database"></i> Base de données optimisée</h4>
+                <p>Structure relationnelle performante et scalable.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- SECTION 5 : TECHNOLOGIES -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-code"></i> Technologies utilisées</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4><i class="fa-brands fa-laravel"></i> Laravel</h4>
+                <p>Framework PHP robuste pour le back-end.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-brands fa-node-js"></i> Node.js</h4>
+                <p>Gestion des services et API côté serveur.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-solid fa-database"></i> MySQL</h4>
+                <p>Base de données relationnelle fiable.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-brands fa-js"></i> JavaScript</h4>
+                <p>Interactivité et logique côté client.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4><i class="fa-brands fa-bootstrap"></i> Bootstrap</h4>
+                <p>Framework CSS pour un design responsive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- SECTION 6 : RESULTATS ET IMPACTS -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-chart-line"></i> Résultats et impacts</h2>
+
+        <div class="context-cards">
+            <!-- CARD PERFORMANCE -->
+            <div class="card">
+                <h3><i class="fa-solid fa-gauge-high"></i> Performance de la plateforme</h3>
+                <ul class="list">
+                    <li>Traitement rapide et fiable des données foncières</li>
+                    <li>Stabilité du système même avec un volume important de données</li>
+                    <li>Temps de réponse optimisé pour les opérations critiques</li>
+                    <li>Disponibilité continue de la plateforme</li>
+                </ul>
+            </div>
+
+            <!-- CARD AVANTAGES -->
+            <div class="card">
+                <h3><i class="fa-solid fa-thumbs-up"></i> Avantages</h3>
+                <ul class="list">
+                    <li>Amélioration significative de la transparence foncière</li>
+                    <li>Réduction des erreurs et des conflits liés aux données</li>
+                    <li>Gain de temps dans la gestion administrative</li>
+                    <li>Meilleure prise de décision grâce aux statistiques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

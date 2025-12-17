@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion École – Plateforme de gestion scolaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+    font-family:'Poppins', sans-serif;
+    background: url('images/ges.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color:#333;
+    line-height:1.6;
+}
+        .container{width:90%;max-width:1200px;margin:auto;}
+        section{padding:60px 0;}
+        h1,h2,h3{color:#ffffff;}
+
+        /* HERO */
+        .hero{background:#e5e7eb;}
+        .hero-content{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+            align-items:center;
+        }
+        .hero h1{font-size:2.4rem;margin-bottom:15px;}
+        .hero p{color:#555;}
+        .hero img{
+            width:100%;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,.1);
+        }
+
+        /* GRIDS */
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+        .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;}
+
+        /* CARD */
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:14px;
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+        }
+        .card h3,.card h4{margin-bottom:10px;}
+        .card p{font-size:.95rem;color:#555;}
+
+        i{margin-right:8px;color:#ffffff;}
+        .grid-3 i{color:#16a34a;}
+
+        /* VIDEO */
+        .video-wrapper{
+            display:flex;
+            justify-content:center;
+            margin-top:40px;
+        }
+        .video-card{
+            max-width:900px;
+            width:100%;
+            text-align:center;
+        }
+        .video-card video{
+            width:100%;
+            border-radius:12px;
+            margin-top:15px;
+        }
+
+        ul{padding-left:18px;}
+        li{margin-bottom:8px;color:#555;}
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .hero-content,.grid-2{grid-template-columns:1fr;}
+            .grid-3{grid-template-columns:1fr 1fr;}
+        }
+        @media(max-width:600px){
+            .grid-3{grid-template-columns:1fr;}
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container hero-content">
+        <div>
+            <h1 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-school" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Gestion École</h1>
+            <p>
+                Gestion École est une plateforme complète pour la gestion scolaire : élèves,
+                classes, paiements, bulletins, notifications et administration centralisée
+                pour les établissements scolaires.
+            </p>
+        </div>
+        <div>
+            <img src="images/ges.png" alt="Plateforme Gestion École">
+        </div>
+    </div>
+</section>
+
+<!-- CONTEXTE -->
+<section>
+    <div class="container">
+        <h2 ><i class="fa-solid fa-circle-info" ></i> Contexte du projet</h2>
+        <p style="max-width:800px;margin-bottom:30px;color:#ffffff;">
+            Les établissements scolaires ont besoin d’un outil centralisé pour suivre les élèves,
+            les classes, les paiements et la communication avec les parents. Gestion École
+            digitalise ces processus pour gagner en efficacité et en transparence.
+        </p>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-triangle-exclamation" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Problématique</h3>
+                <p>
+                    Gestion manuelle des élèves et des paiements, manque de visibilité sur
+                    les performances et communication inefficace avec les parents.
+                </p>
+            </div>
+            <div class="card">
+                <h3 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-bullseye" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Objectifs</h3>
+                <p>
+                    Centraliser les données scolaires, automatiser la gestion et améliorer
+                    la communication avec les familles.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section>
+    <div class="container">
+        <div class="video-wrapper">
+            <div class="card video-card">
+                <h3 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-play" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Démonstration de Gestion École</h3>
+                <video controls>
+                    <source src="videos/gestion-ecole-demo.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FONCTIONNALITES -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-layer-group"></i> Fonctionnalités principales</h2>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4><i class="fa-solid fa-user-graduate"></i> Gestion des élèves</h4>
+                <p>Suivi complet des dossiers et performances des élèves.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-chalkboard-user"></i> Gestion des classes</h4>
+                <p>Organisation et suivi des classes et enseignants.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-money-bill-wave"></i> Paiements</h4>
+                <p>Suivi des frais, échéances et reçus pour chaque élève.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-file-lines"></i> Bulletins</h4>
+                <p>Génération automatique des bulletins scolaires.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-bell"></i> Notifications</h4>
+                <p>Alertes et communication avec les parents et le personnel.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-shield-halved"></i> Sécurité</h4>
+                <p>Protection des données des élèves et confidentialité totale.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-code"></i> Technologies utilisées</h2>
+
+        <div class="grid-3">
+            <div class="card">
+                <h4><i class="fa-solid fa-code"></i> PHP</h4>
+                <p>Langage back-end pour la logique et gestion des données.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-brands fa-vuejs"></i> Vue.js</h4>
+                <p>Framework JS pour l’interface interactive et dynamique.</p>
+            </div>
+            <div class="card">
+                <h4><i class="fa-solid fa-database"></i> MySQL</h4>
+                <p>Base de données relationnelle fiable pour stocker toutes les informations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESULTATS -->
+<section>
+    <div class="container">
+        <h2><i class="fa-solid fa-chart-line"></i> Résultats et impacts</h2>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3 style="max-width:800px;color:#1f2937;"><i class="fa-solid fa-gauge-high" style="max-width:800px;color:#1f2937;"></i> Performance</h3>
+                <ul>
+                    <li>Gestion efficace des élèves et classes</li>
+                    <li>Suivi précis des paiements et bulletins</li>
+                    <li>Communication rapide avec les parents</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="max-width:800px;color:#1f2937;"><i class="fa-solid fa-thumbs-up" style="max-width:800px;color:#1f2937;"></i> Avantages</h3>
+                <ul>
+                    <li>Amélioration de l’organisation scolaire</li>
+                    <li>Gain de temps pour le personnel</li>
+                    <li>Meilleure prise de décision pour la direction</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
