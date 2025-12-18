@@ -297,6 +297,35 @@
     font-size: 0.8rem;
     font-weight: 500;
 }
+.projects-filter{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    padding:10px 22px;
+    border-radius:999px;
+    border:1px solid #e5e7eb;
+    background:#fff;
+    cursor:pointer;
+    font-weight:500;
+    transition:.3s;
+}
+
+.filter-btn:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.filter-btn.active{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+}
+
 
 /* Pour tablettes */
 @media (max-width: 1024px) {
@@ -831,133 +860,163 @@
     </div>
 
 </section>
-<section id="projects" class="s-projects target-section">      
-    <div class="skills-wrapper-card">
-        <div class="container mx-auto px-6 py-16">
+    <section id="projects" class="s-projects target-section">      
+        <div class="skills-wrapper-card">
+            <div class="container mx-auto px-6 py-16">
 
-            <!-- CARD CENTRALE -->
-            <div class="skills-card">
+                <!-- CARD CENTRALE -->
+                <div class="skills-card">
 
-                <!-- TITRE -->
-                <div class="text-center mb-12">
-                    <h2 class="text-5xl font-semibold tracking-tight text-gray-900 mb-4 font-[Poppins]">
-                        🚀 Mes Projets
-                    </h2>
-                    <p class="text-lg text-gray-600 font-[Inter] leading-relaxed max-w-2xl mx-auto">
-                        Découvrez une sélection de projets que j’ai réalisés avec passion.
-                    </p>
-                </div>
-
-                <!-- GRID DES PROJETS -->
-                <div class="projects-grid">
-
-                    <!-- PROJET 1 -->
-                    <div class="project-card">
-                        <div class="project-badge badge-in-progress">En cours</div>
-                        <img src="images/s1.png" alt="SunuSuuf App" class="project-img">
-                        <h4>SunuSuuf</h4>
-                        <p>
-                            Plateforme de gestion foncière complète avec dashboard, parcelles,
-                            paiements, contrats et API sécurisée.
+                    <!-- TITRE -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-5xl font-semibold tracking-tight text-gray-900 mb-4 font-[Poppins]">
+                            🚀 Mes Projets
+                        </h2>
+                        <p class="text-lg text-gray-600 font-[Inter] leading-relaxed max-w-2xl mx-auto">
+                            Découvrez une sélection de projets que j’ai réalisés avec passion.
                         </p>
-                        <div class="project-techs">
-                            <span>Node Js</span>
-                            <span>MySQL</span>
-                            <span>JavaScript</span>
-                            <span>Laravel</span>
-                            <span>Bootstrap</span>
-                        </div>
-                        <a href="sunusuuf.html" class="btn-details">Voir détails</a>
                     </div>
+<!-- FILTRE PROJETS -->
+<div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">
+        Tous les projets
+    </button>
+    <button class="filter-btn" data-filter="hosted">
+        🌍 Projets hébergés
+    </button>
+    <button class="filter-btn" data-filter="local">
+        🧪 Projets non hébergés
+    </button>
+</div>
 
-                    <!-- PROJET 2 -->
-                    <div class="project-card">
-                        <div class="project-badge badge-completed">Terminé</div>
-                        <img src="images/gaov1.png" alt="GAOV" class="project-img">
-                        <h4>GAOV</h4>
-                        <p>
-                            Application web de gestion optimisée des opérations GAOV, incluant tableaux de bord,
-                            suivi des données et rapports automatisés.
-                        </p>
-                        <div class="project-techs">
-                            <span>Laravel</span>
-                            <span>TailwindCSS</span>
-                            <span>JavaScript</span>
-                            <span>MySQL</span>
+                    <!-- GRID DES PROJETS -->
+                    <div class="projects-grid">
+
+                        <!-- PROJET 1 -->
+                        <div class="project-card" data-status="local">
+                            <div class="project-badge badge-in-progress">En cours</div>
+                            <img src="images/s1.png" alt="SunuSuuf App" class="project-img">
+                            <h4>SunuSuuf</h4>
+                            <p>
+                                Plateforme de gestion foncière complète avec dashboard, parcelles,
+                                paiements, contrats et API sécurisée.
+                            </p>
+                            <div class="project-techs">
+                                <span>Node Js</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>Laravel</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <a href="sunusuuf.html" class="btn-details">Voir détails</a>
                         </div>
-                        <a href="gaov.html" class="btn-details">Voir détails</a>
-                    </div>
 
-                      <!-- PROJET 4 : GESTION ECOLE -->
-                      <div class="project-card">
-                        <div class="project-badge badge-completed">Terminé</div>
-                        <img src="images/ges.png" alt="Gestion École" class="project-img">
-                        <h4>Gestion École</h4>
-                        <p>
-                            Système complet de gestion scolaire : élèves, classes, paiements, bulletins et notifications.
-                        </p>
-                        <div class="project-techs">
-                            <span>PHP</span>
-                            <span>Vue.js</span>
-                            <span>MySQL</span>
+                        <!-- PROJET 2 -->
+                        <div class="project-card" data-status="hosted">
+                            <div class="project-badge badge-completed">Terminé</div>
+                            <img src="images/gaov1.png" alt="GAOV" class="project-img">
+                            <h4>GAOV</h4>
+                            <p>
+                                Application web de gestion optimisée des opérations GAOV, incluant tableaux de bord,
+                                suivi des données et rapports automatisés.
+                            </p>
+                            <div class="project-techs">
+                                <span>Laravel</span>
+                                <span>TailwindCSS</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                            </div>
+                            <a href="gaov.html" class="btn-details">Voir détails</a>
                         </div>
-                        <a href="gestion-ecole.html" class="btn-details">Voir détails</a>
-                    </div>
-                    <!-- PROJET 3 -->
-                    <div class="project-card">
-                        <div class="project-badge badge-completed">Terminé</div>
-                        <img src="images/aaas1.png" alt="L'AAAS" class="project-img">
-                        <h4>L'AAAS</h4>
-                        <p>
-                            Plateforme web moderne pour la gestion des activités et des services de l'AAAS.
-                        </p>
-                        <div class="project-techs">
-                            <span>Laravel</span>
-                            <span>TailwindCSS</span>
-                            <span>JavaScript</span>
+                        <!-- PROJET : SUUFBOT -->
+                        <div class="project-card" data-status="local">
+                            <div class="project-badge badge-completed">Terminé</div>
+                            <img src="images/suufbot.png" alt="SuufBot" class="project-img">
+                            <h4>SuufBot</h4>
+                            <p>
+                                Assistant conversationnel intelligent dédié à l’information foncière,
+                                à l’orientation des usagers et à l’automatisation des réponses liées au domaine foncier.
+                            </p>
+                            <div class="project-techs">
+                                <span>IA</span>
+                                <span>Chatbot</span>
+                                <span>API</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="suufbot.html" class="btn-details">Voir détails</a>
                         </div>
-                        <a href="aaas.html" class="btn-details">Voir détails</a>
-                    </div>
 
-                    <!-- PROJET 5 : VIDANGE -->
-                    <div class="project-card">
-                        <div class="project-badge badge-in-progress">En cours</div>
-                        <img src="images/vid.png" alt="Vidange Service" class="project-img">
-                        <h4>Vidange Service</h4>
-                        <p>
-                            Application de gestion des demandes de vidange, planification des interventions et facturation automatique.
-                        </p>
-                        <div class="project-techs">
-                            <span>Laravel</span>
-                            <span>React</span>
-                            <span>API REST</span>
+                        <!-- PROJET 4 : GESTION ECOLE -->
+                        <div class="project-card" data-status="hosted">
+                            <div class="project-badge badge-completed">Terminé</div>
+                            <img src="images/ges.png" alt="Gestion École" class="project-img">
+                            <h4>Gestion École</h4>
+                            <p>
+                                Système complet de gestion scolaire : élèves, classes, paiements, bulletins et notifications.
+                            </p>
+                            <div class="project-techs">
+                                <span>PHP</span>
+                                <span>Vue.js</span>
+                                <span>MySQL</span>
+                            </div>
+                            <a href="gestion-ecole.html" class="btn-details">Voir détails</a>
                         </div>
-                        <a href="#" class="btn-details">Voir détails</a>
-                    </div>
-
-                    <!-- PROJET 6 : STEM -->
-                    <div class="project-card">
-                        <div class="project-badge badge-completed">Terminé</div>
-                        <img src="images/stem.png" alt="STEM Learning App" class="project-img">
-                        <h4>STEM Learning</h4>
-                        <p>
-                            Plateforme éducative interactive pour enfants, dédiée aux sciences et technologies (STEM).
-                        </p>
-                        <div class="project-techs">
-                            <span>JavaFx</span>
-                            <span>Java</span>
-                            <span>JEE</span>
-                            <span>TailwindCSS</span>
+                        <!-- PROJET 3 -->
+                        <div class="project-card" data-status="hosted">
+                            <div class="project-badge badge-completed">Terminé</div>
+                            <img src="images/aaas1.png" alt="L'AAAS" class="project-img">
+                            <h4>L'AAAS</h4>
+                            <p>
+                                Plateforme web moderne pour la gestion des activités et des services de l'AAAS.
+                            </p>
+                            <div class="project-techs">
+                                <span>Laravel</span>
+                                <span>TailwindCSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="aaas.html" class="btn-details">Voir détails</a>
                         </div>
-                        <a href="#" class="btn-details">Voir détails</a>
+
+                        <!-- PROJET 5 : VIDANGE -->
+                        <div class="project-card" data-status="local">
+                            <div class="project-badge badge-in-progress">En cours</div>
+                            <img src="images/vid.png" alt="Vidange Service" class="project-img">
+                            <h4>Vidange Service</h4>
+                            <p>
+                                Application de gestion des demandes de vidange, planification des interventions et facturation automatique.
+                            </p>
+                            <div class="project-techs">
+                                <span>Laravel</span>
+                                <span>React</span>
+                                <span>API REST</span>
+                            </div>
+                            <a href="#" class="btn-details">Voir détails</a>
+                        </div>
+
+                        <!-- PROJET 6 : STEM -->
+                        <div class="project-card" data-status="local">
+
+                            <div class="project-badge badge-completed">Terminé</div>
+                            <img src="images/stem.png" alt="STEM Learning App" class="project-img">
+                            <h4>STEM Learning</h4>
+                            <p>
+                                Plateforme éducative interactive pour enfants, dédiée aux sciences et technologies (STEM).
+                            </p>
+                            <div class="project-techs">
+                                <span>JavaFx</span>
+                                <span>Java</span>
+                                <span>JEE</span>
+                                <span>TailwindCSS</span>
+                            </div>
+                            <a href="#" class="btn-details">Voir détails</a>
+                        </div>
+
                     </div>
+                </div><!-- END CARD -->
 
-                </div>
-            </div><!-- END CARD -->
-
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -1048,6 +1107,28 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+    
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+    
+                const filter = btn.dataset.filter;
+    
+                projects.forEach(project => {
+                    if(filter === 'all'){
+                        project.style.display = 'block';
+                    }else{
+                        project.style.display =
+                            project.dataset.status === filter ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>

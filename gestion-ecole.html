@@ -75,7 +75,20 @@
 
         ul{padding-left:18px;}
         li{margin-bottom:8px;color:#555;}
-
+          /* BUTTON */
+          .btn-details{
+            display:inline-block;
+            background:#2563eb;
+            color:#fff;
+            padding:12px 28px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:500;
+            transition:background .3s ease;
+        }
+        .btn-details:hover{
+            background:#1e40af;
+        }
         /* RESPONSIVE */
         @media(max-width:900px){
             .hero-content,.grid-2{grid-template-columns:1fr;}
@@ -117,14 +130,14 @@
 
         <div class="grid-2">
             <div class="card">
-                <h3 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-triangle-exclamation" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Problématique</h3>
+                <h3 style="max-width:800px;color:#1f2937;"><i class="fa-solid fa-triangle-exclamation" style="max-width:800px;color:#1f2937;"></i> Problématique</h3>
                 <p>
                     Gestion manuelle des élèves et des paiements, manque de visibilité sur
                     les performances et communication inefficace avec les parents.
                 </p>
             </div>
             <div class="card">
-                <h3 style="max-width:800px;margin-bottom:30px;color:#1f2937;"><i class="fa-solid fa-bullseye" style="max-width:800px;margin-bottom:30px;color:#1f2937;"></i> Objectifs</h3>
+                <h3 style="max-width:800px;color:#1f2937;"><i class="fa-solid fa-bullseye" style="max-width:800px;color:#1f2937;"></i> Objectifs</h3>
                 <p>
                     Centraliser les données scolaires, automatiser la gestion et améliorer
                     la communication avec les familles.
@@ -228,6 +241,14 @@
                 </ul>
             </div>
         </div>
+    </div>
+</section>
+<!-- RETOUR -->
+<section>
+    <div class="container" style="text-align:center;">
+        <a href="index.html#projects" class="btn-details">
+            ← Retour aux projets
+        </a>
     </div>
 </section>
 

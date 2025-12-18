@@ -142,7 +142,20 @@ i{
 .feature-card i{
     color:#16a34a; /* vert validation */
 }
-
+  /* BUTTON */
+  .btn-details{
+            display:inline-block;
+            background:#2563eb;
+            color:#fff;
+            padding:12px 28px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:500;
+            transition:background .3s ease;
+        }
+.btn-details:hover{
+            background:#1e40af;
+        }
 
         /* RESPONSIVE */
         @media(max-width:900px){
@@ -212,17 +225,31 @@ i{
                 </div>
             </div>
 
-                    <!-- CARD VIDEO LOCALE -->
-            <div class="video-wrapper">
-                <div class="card video-card">
-                    <h3><i class="fa-solid fa-play"></i> Démonstration vidéo de la plateforme</h3>
-                    <p>Aperçu réel de l'enjeux du domaine foncier au Senegal.</p>
-                    <video controls>
-                        <source src="images/SunuSuuf.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la lecture vidéo.
-                    </video>
-                </div>
-            </div>
+           <!-- CARD VIDEO (LIEN GOOGLE DRIVE) -->
+<div class="video-wrapper">
+    <div class="card video-card">
+        <h3><i class="fa-solid fa-play"></i> Démonstration vidéo de la plateforme</h3>
+        <p>Aperçu réel de l’enjeu du domaine foncier au Sénégal.</p>
+
+        <a 
+            href="https://drive.google.com/file/d/1W8aN0Hr468K9mAhQkNW09_z8Qw9pJW5d/view?usp=drive_link"
+            target="_blank"
+            style="
+                display:inline-block;
+                margin-top:20px;
+                padding:14px 28px;
+                background:#2563eb;
+                color:#fff;
+                text-decoration:none;
+                border-radius:10px;
+                font-weight:500;
+            "
+        >
+            <i class="fa-brands fa-google-drive"></i> Regarder la vidéo sur Google Drive
+        </a>
+    </div>
+</div>
+
 
         </div>
     </section>
@@ -348,6 +375,14 @@ i{
                 </ul>
             </div>
         </div>
+    </div>
+</section>
+<!-- RETOUR -->
+<section>
+    <div class="container" style="text-align:center;">
+        <a href="index.html#projects" class="btn-details">
+            ← Retour aux projets
+        </a>
     </div>
 </section>
 
