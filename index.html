@@ -325,6 +325,46 @@
     color:#fff;
     border-color:#2563eb;
 }
+.learning-badge {
+    display: inline-block;
+    margin: 6px 0 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+/* Couleurs par techno */
+.flutter { color: #02569B; }
+.android { color: #3DDC84; }
+.ios { color: #000000; }
+
+.progress-bar.flutter {
+    background: linear-gradient(90deg, #02569B, #42A5F5);
+}
+
+.progress-bar.android {
+    background: linear-gradient(90deg, #3DDC84, #00C853);
+}
+
+.progress-bar.ios {
+    background: linear-gradient(90deg, #111827, #6B7280);
+}
+
+
+.progress-bar.angular {
+    background: linear-gradient(90deg, #DD0031, #C3002F);
+}
+
+.flutter {
+    color: #02569B;
+}
+
+.angular {
+    color: #DD0031;
+}
 
 
 /* Pour tablettes */
@@ -680,6 +720,20 @@
                             <p class="tech-desc">Développement d’applications SPA et composants réutilisables.</p>
                         </div>
 
+                        <div class="tech-card">
+                            <i class="fab fa-angular angular"></i>
+                            <span>Angular</span>
+                            <div class="progress">
+                                <div class="progress-bar angular" style="width:45%;"></div>
+                            </div>
+                            <p class="percent">45%</p>
+                            <p class="tech-desc">
+                                Développement d’applications web structurées avec Angular.  
+                                <strong>En cours d’apprentissage</strong>.
+                            </p>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -724,6 +778,69 @@
 
                     </div>
                 </div>
+              <!-- =============================
+    MOBILE
+============================== -->
+<div class="mb-12">
+    <h3 class="text-3xl font-bold text-gray-800 mb-6 font-[Poppins]">
+        📱 Développement Mobile
+    </h3>
+
+    <div class="tech-row mobile">
+
+        <!-- FLUTTER -->
+        <div class="tech-card">
+            <i class="fas fa-mobile-alt flutter"></i>
+            <span>Flutter</span>
+
+            <span class="learning-badge">En cours d’apprentissage</span>
+
+            <div class="progress">
+                <div class="progress-bar flutter" style="width:40%;"></div>
+            </div>
+            <p class="percent">40%</p>
+
+            <p class="tech-desc">
+                Développement d’applications mobiles multiplateformes (Android & iOS).
+            </p>
+        </div>
+
+        <!-- ANDROID -->
+        <div class="tech-card">
+            <i class="fab fa-android android"></i>
+            <span>Android</span>
+
+            <span class="learning-badge">En cours d’apprentissage</span>
+
+            <div class="progress">
+                <div class="progress-bar android" style="width:35%;"></div>
+            </div>
+            <p class="percent">35%</p>
+
+            <p class="tech-desc">
+                Développement d’applications Android natives.
+            </p>
+        </div>
+
+        <!-- iOS -->
+        <div class="tech-card">
+            <i class="fab fa-apple ios"></i>
+            <span>iOS</span>
+
+            <span class="learning-badge">En cours d’apprentissage</span>
+
+            <div class="progress">
+                <div class="progress-bar ios" style="width:30%;"></div>
+            </div>
+            <p class="percent">30%</p>
+
+            <p class="tech-desc">
+                Développement d’applications iOS et compréhension de l’écosystème Apple.
+            </p>
+        </div>
+
+    </div>
+</div>
 
                 <!-- =============================
                     DEVOPS & OUTILS
@@ -872,18 +989,18 @@
                             Découvrez une sélection de projets que j’ai réalisés avec passion.
                         </p>
                     </div>
-<!-- FILTRE PROJETS -->
-<div class="projects-filter">
-    <button class="filter-btn active" data-filter="all">
-        Tous les projets
-    </button>
-    <button class="filter-btn" data-filter="hosted">
-        🌍 Projets hébergés
-    </button>
-    <button class="filter-btn" data-filter="local">
-        🧪 Projets non hébergés
-    </button>
-</div>
+                    <!-- FILTRE PROJETS -->
+                    <div class="projects-filter">
+                        <button class="filter-btn active" data-filter="all">
+                            Tous les projets
+                        </button>
+                        <button class="filter-btn" data-filter="hosted">
+                            🌍 Projets hébergés
+                        </button>
+                        <button class="filter-btn" data-filter="local">
+                            🧪 Projets non hébergés
+                        </button>
+                    </div>
 
                     <!-- GRID DES PROJETS -->
                     <div class="projects-grid">
@@ -994,7 +1111,7 @@
                         <div class="project-card" data-status="local">
 
                             <div class="project-badge badge-completed">Terminé</div>
-                            <img src="images/stem.png" alt="STEM Learning App" class="project-img">
+                            <img src="images/stem.jpg" alt="STEM Learning App" class="project-img">
                             <h4>STEM Learning</h4>
                             <p>
                                 Plateforme éducative interactive pour enfants, dédiée aux sciences et technologies (STEM).
