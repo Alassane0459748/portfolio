@@ -5,6 +5,9 @@
     <title>SuufBot – Assistant IA Foncière</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <meta name="description" content="SuufBot est un assistant intelligent dédié au secteur foncier sénégalais. Il automatise les réponses, oriente les usagers et modernise l’accès à l’information foncière grâce à l’IA.">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
@@ -19,12 +22,17 @@
         }
 
         body{
-    font-family:'Poppins', sans-serif;
-    background: url('images/ia.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color:#333;
-    line-height:1.6;
-}
+            font-family:'Poppins', sans-serif;
+            background: url('images/ia.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color:#333;
+            line-height:1.6;
+        }
+
+        .overlay{
+            background: rgba(0,0,0,0.5);
+            min-height: 100vh;
+        }
 
         .container{
             width:90%;
@@ -50,12 +58,12 @@
         }
 
         p{
-            color:#000000;
+            color:#000;
         }
 
         /* HERO */
         .project-hero{
-            background:linear-gradient(135deg,#111827,#1f2937);
+            background:linear-gradient(135deg,#020617,#0f172a);
             color:#fff;
             text-align:center;
             padding:100px 0;
@@ -63,9 +71,9 @@
 
         .project-hero p{
             color:#d1d5db;
-            max-width:700px;
+            max-width:800px;
             margin:20px auto 0;
-            font-size:1.05rem;
+            font-size:1.1rem;
         }
 
         .badge-ai{
@@ -78,7 +86,7 @@
             margin-bottom:20px;
         }
 
-        /* CARDS & GRIDS */
+        /* GRID */
         .grid-2{
             display:grid;
             grid-template-columns:1fr 1fr;
@@ -101,7 +109,6 @@
             margin-bottom:10px;
         }
 
-        /* HIGHLIGHT SECTION */
         .section-highlight{
             background:#eef2ff;
         }
@@ -110,7 +117,6 @@
             margin-top:30px;
         }
 
-        /* TECHNOLOGIES */
         .project-techs{
             display:flex;
             flex-wrap:wrap;
@@ -123,13 +129,6 @@
             padding:8px 14px;
             border-radius:20px;
             font-size:0.85rem;
-        }
-
-        /* VIDEO */
-        iframe{
-            border-radius:16px;
-            box-shadow:0 12px 30px rgba(0,0,0,0.15);
-            margin-top:30px;
         }
 
         /* BUTTON */
@@ -148,68 +147,55 @@
             background:#1e40af;
         }
 
-        /* ICONS */
         i{
             margin-right:8px;
             color:#2563eb;
         }
-        /* CAPTURES D'ÉCRAN */
-.screenshots-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:25px;
-    margin-top:40px;
-}
 
-.screenshot-card{
-    background:#fff;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.15);
-    text-align:center;
-    transition:transform .3s ease;
-}
+        /* SCREENSHOTS */
+        .screenshots-grid{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:25px;
+            margin-top:40px;
+        }
 
-.screenshot-card:hover{
-    transform:translateY(-6px);
-}
+        .screenshot-card{
+            background:#fff;
+            border-radius:16px;
+            overflow:hidden;
+            box-shadow:0 12px 30px rgba(0,0,0,0.15);
+            text-align:center;
+            transition:transform .3s ease;
+        }
 
-.screenshot-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
+        .screenshot-card:hover{
+            transform:translateY(-6px);
+        }
 
-.screenshot-card p{
-    padding:15px;
-    font-size:0.9rem;
-    color:#374151;
-}
+        .screenshot-card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-    .screenshots-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-    .screenshots-grid{
-        grid-template-columns:1fr;
-    }
-}
-
+        .screenshot-card p{
+            padding:15px;
+            font-size:0.9rem;
+            color:#374151;
+        }
 
         /* RESPONSIVE */
         @media(max-width:900px){
-            .grid-2{
-                grid-template-columns:1fr;
-            }
-
-            h1{
-                font-size:2.2rem;
-            }
+            .grid-2{grid-template-columns:1fr;}
+            .screenshots-grid{grid-template-columns:1fr 1fr;}
+            h1{font-size:2.2rem;}
         }
+
+        @media(max-width:600px){
+            .screenshots-grid{grid-template-columns:1fr;}
+        }
+
     </style>
 </head>
 
@@ -218,11 +204,13 @@
 <!-- HERO -->
 <section class="project-hero">
     <div class="container">
-        <span class="badge-ai">🤖 Intelligence Artificielle</span>
+        <span class="badge-ai">🤖 Intelligence Artificielle Foncière</span>
         <h1>SuufBot</h1>
         <p>
-            Assistant conversationnel intelligent conçu pour automatiser
-            l’accès à l’information foncière et améliorer l’expérience utilisateur.
+            SuufBot est un assistant conversationnel intelligent dédié à la gestion foncière.
+            Il permet aux citoyens, entreprises et administrations d’accéder plus rapidement
+            aux informations foncières, d’obtenir des réponses fiables et d’être orientés
+            vers les bons services — 24h/24 et 7j/7.
         </p>
     </div>
 </section>
@@ -230,48 +218,102 @@
 <!-- CONTEXTE -->
 <section>
     <div class="container">
-        <h2><i class="fa-solid fa-circle-info"></i> Contexte du projet</h2>
+        <h2><i class="fa-solid fa-circle-info"></i> Contexte & Enjeux</h2>
 
         <div class="grid-2">
             <div class="card">
                 <h3><i class="fa-solid fa-triangle-exclamation"></i> Problématique</h3>
                 <p>
-                    Accès difficile à l’information foncière, surcharge des agents
-                    et absence d’assistance automatisée.
+                    L’accès à l’information foncière reste complexe :
                 </p>
+                <ul>
+                    <li>❌ Multiplicité des structures</li>
+                    <li>❌ Procédures longues et mal connues</li>
+                    <li>❌ Déplacements fréquents des usagers</li>
+                    <li>❌ Charge administrative élevée</li>
+                </ul>
             </div>
 
             <div class="card">
                 <h3><i class="fa-solid fa-bullseye"></i> Objectifs</h3>
+                <ul>
+                    <li>✔ démocratiser l'accès à l’information foncière</li>
+                    <li>✔ assister les usagers en temps réel</li>
+                    <li>✔ réduire les files d’attente et appels</li>
+                    <li>✔ moderniser l’image des services publics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PUBLICS CIBLES -->
+<section class="section-highlight">
+    <div class="container">
+        <h2 style="color:#000;"><i class="fa-solid fa-users"></i> Publics cibles</h2>
+
+        <div class="grid-2">
+            <div class="card">
+                <ul>
+                    <li>🏠 <strong>Citoyens et propriétaires fonciers</strong><br>
+                        Accès simplifié à leurs informations foncières, suivi des dossiers,
+                        paiements, titres et historique des opérations sans déplacements inutiles.
+                    </li>
+
+                    <li>🏢 <strong>Promoteurs et agences immobilières</strong><br>
+                        Outil centralisé pour la gestion des parcelles, prospects, contrats,
+                        réservations et transactions en toute traçabilité.
+                    </li>
+
+                    <li>⚖️ <strong>Notaires et cabinets juridiques</strong><br>
+                        Consultation rapide des informations, réduction des litiges,
+                        sécurisation des procédures et meilleure préparation des dossiers.
+                    </li>
+
+                    <li>🏛️ <strong>Administrations et collectivités locales</strong><br>
+                        Modernisation des services, gestion transparente du foncier,
+                        réduction des fraudes et meilleure prise de décision basée sur les données.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
                 <p>
-                    Fournir des réponses instantanées, orienter les usagers
-                    et réduire la charge administrative.
+                    Grâce à <strong>SuufBot</strong>, chaque public bénéficie d’un accompagnement
+                    intelligent et disponible 24h/24 : assistance aux démarches, explications des
+                    procédures, orientation vers les bons services et automatisation des demandes.
+                    <br><br>
+                    L’objectif est de rendre la gestion foncière <strong>plus accessible, plus rapide
+                    et plus fiable</strong>, tout en limitant les conflits, la désinformation et les
+                    déplacements physiques grâce à la digitalisation.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
+
 <!-- FONCTIONNALITÉS -->
 <section>
     <div class="container">
-        <h2><i class="fa-solid fa-gears"></i> Fonctionnalités</h2>
+        <h2><i class="fa-solid fa-gears"></i> Fonctionnalités clés</h2>
 
         <div class="grid-2">
             <div class="card">
                 <ul>
-                    <li>💬 Chat intelligent en langage naturel</li>
-                    <li>🧠 Réponses automatiques basées sur IA</li>
-                    <li>📍 Orientation des usagers</li>
-                    <li>📊 Analyse des requêtes</li>
+                    <li>💬 Conversation naturelle en wolof & français</li>
+                    <li>🧠 Moteur IA adapté au domaine foncier</li>
+                    <li>📍 Orientation automatique des demandes</li>
+                    <li>📊 Tableau de bord et statistiques</li>
                 </ul>
             </div>
+
             <div class="card">
                 <ul>
-                    <li>🔐 Sécurité des échanges</li>
-                    <li>⚙️ Intégration API</li>
-                    <li>📱 Compatible web & mobile</li>
-                    <li>🚀 Architecture évolutive</li>
+                    <li>🔐 Sécurité et anonymisation des échanges</li>
+                    <li>⚙️ Connexion API avec SunuSuuf</li>
+                    <li>📱 Application web et mobile</li>
+                    <li>🚀 Scalabilité pour l’administration</li>
                 </ul>
             </div>
         </div>
@@ -281,35 +323,68 @@
 <!-- SYNERGIE -->
 <section class="section-highlight">
     <div class="container">
-        <h2 style="max-width:800px;color:#000000;"><i class="fa-solid fa-link"></i> Synergie SunuSuuf & SuufBot</h2>
+        <h2 style="max-width:800px;color:#000000;">
+            <i class="fa-solid fa-link"></i> Synergie SunuSuuf & SuufBot
+        </h2>
 
         <div class="grid-2">
             <div class="card">
                 <h3>🌍 SunuSuuf</h3>
                 <p>
-                    Plateforme centrale de gestion foncière :
-                    parcelles, paiements, contrats et suivi administratif.
+                    SunuSuuf constitue le cœur du système d'information foncière.
+                    Il centralise la gestion des parcelles, des propriétaires, des paiements,
+                    des contrats ainsi que le suivi des dossiers administratifs.
+                    La plateforme permet aux administrations et collectivités locales
+                    de disposer d’une vue unifiée et actualisée de la situation foncière.
+                </p>
+                <p>
+                    Elle remplace progressivement les traitements manuels ou papiers
+                    par des procédures numériques plus rapides, traçables et sécurisées.
                 </p>
             </div>
 
             <div class="card">
                 <h3>🤖 SuufBot</h3>
                 <p>
-                    Assistant IA connecté à SunuSuuf pour informer,
-                    guider et automatiser les échanges.
+                    SuufBot vient se connecter à SunuSuuf pour en devenir l’interface
+                    conversationnelle. Il joue le rôle d’assistant virtuel :
+                </p>
+                <ul>
+                    <li>✔ répond aux questions des usagers</li>
+                    <li>✔ explique les démarches à suivre</li>
+                    <li>✔ oriente vers les bons services</li>
+                    <li>✔ fournit des informations en temps réel</li>
+                </ul>
+                <p>
+                    Il permet ainsi aux utilisateurs de dialoguer naturellement
+                    au lieu de naviguer dans des menus complexes ou d’attendre au guichet.
                 </p>
             </div>
         </div>
 
         <div class="card mt-4">
             <p>
-                SuufBot agit comme une extension intelligente de SunuSuuf.
-                Ensemble, ils forment un écosystème numérique complet
-                pour moderniser la gestion foncière au Sénégal.
+                La complémentarité entre SunuSuuf et SuufBot transforme l'expérience foncière.
+                SunuSuuf structure et sécurise les données, tandis que SuufBot rend ces données
+                accessibles, compréhensibles et utilisables par tous.
+            </p>
+
+            <p style="margin-top:10px;">
+                Grâce à cette synergie, les administrations disposent d’un outil de pilotage moderne,
+                les citoyens accèdent plus facilement à l’information et les procédures deviennent
+                plus rapides, transparentes et inclusives. Le duo constitue ainsi un véritable
+                écosystème numérique au service de la modernisation de la gestion foncière au Sénégal.
+            </p>
+
+            <p style="margin-top:10px;">
+                À terme, cette intégration ouvre la voie à d’autres innovations :
+                prise de rendez-vous en ligne, dépôt de demandes, suivi d’avancement des dossiers,
+                génération automatique de documents ou encore assistance multilingue.
             </p>
         </div>
     </div>
 </section>
+
 
 <!-- TECHNOLOGIES -->
 <section>
@@ -318,68 +393,40 @@
         <div class="project-techs">
             <span>JavaScript</span>
             <span>React.js</span>
+            <span>Node.js</span>
             <span>API REST</span>
             <span>IA / NLP</span>
+            <span>Base de connaissances</span>
         </div>
     </div>
 </section>
 
-<!-- CAPTURES D'ÉCRAN -->
-<section>
-    <div class="container">
-        <h2><i class="fa-solid fa-images"></i> Captures d’écran de SuufBot</h2>
-
-        <div class="screenshots-grid">
-            <div class="screenshot-card">
-                <img src="images/suufbot-chat.png" alt="Interface chat SuufBot">
-                <p>Interface principale du chat IA</p>
-            </div>
-
-            <div class="screenshot-card">
-                <img src="images/suufbot-response.png" alt="Réponses intelligentes">
-                <p>Réponses intelligentes en langage naturel</p>
-            </div>
-
-            <div class="screenshot-card">
-                <img src="images/suufbot-dashboard.png" alt="Dashboard SuufBot">
-                <p>Tableau de bord et statistiques</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- RESULTATS & IMPACTS -->
+<!-- RESULTATS -->
 <section class="section-highlight">
     <div class="container">
-        <h2 style="max-width:800px;color:#000000;"><i class="fa-solid fa-chart-line"></i> Résultats & Impacts</h2>
+        <h2 style="color:#000;"><i class="fa-solid fa-chart-line"></i> Résultats attendus</h2>
 
         <div class="grid-2">
-            <!-- PERFORMANCE -->
             <div class="card">
-                <h3><i class="fa-solid fa-gauge-high"></i> Performance</h3>
                 <ul>
-                    <li>⚡ Réponses instantanées aux requêtes foncières</li>
-                    <li>📈 Réduction du temps de traitement des demandes</li>
-                    <li>🤖 Automatisation des questions récurrentes</li>
-                    <li>🧠 Amélioration continue grâce à l’apprentissage IA</li>
+                    <li>⚡ Temps de réponse réduit</li>
+                    <li>📉 Diminution des déplacements inutiles</li>
+                    <li>💬 Démarches mieux comprises</li>
+                    <li>🧠 Amélioration continue par IA</li>
                 </ul>
             </div>
 
-            <!-- AVANTAGES -->
             <div class="card">
-                <h3><i class="fa-solid fa-thumbs-up"></i> Avantages</h3>
                 <ul>
-                    <li>👥 Meilleure expérience utilisateur</li>
-                    <li>🏢 Allègement de la charge des agents</li>
-                    <li>🔗 Intégration fluide avec SunuSuuf</li>
-                    <li>🌍 Accessibilité 24/7 à l’information foncière</li>
+                    <li>👥 Satisfaction des usagers</li>
+                    <li>🏢 agents recentrés sur tâches essentielles</li>
+                    <li>🌍 accès 24/7</li>
+                    <li>📊 pilotage par données</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
 
 <!-- RETOUR -->
 <section>
