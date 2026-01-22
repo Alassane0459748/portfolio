@@ -4460,7 +4460,7 @@ h1, h2, h3, h4 {
 
 /* ===== FOOTER GLOBAL ===== */
 .s-footer {
-    background: linear-gradient(135deg, #0f172a, #020617);
+    background: linear-gradient(135deg, #000000, #020617);
     color: #cbd5f5;
     padding-top: 80px;
     font-size: 15px;
